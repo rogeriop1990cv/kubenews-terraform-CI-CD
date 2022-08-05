@@ -42,5 +42,5 @@ jobs:
         with:
           images: rogeriop1990cv/kubenews:${{ github.run_number }}
           manifests: |
-            /kube-news/k8s/deployment.yaml
+            ./kube-news/k8s/deployment.yaml
             
