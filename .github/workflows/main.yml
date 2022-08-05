@@ -20,8 +20,8 @@ jobs:
       - name: Docker Build & Push Action
         uses: docker/build-push-action@v3.1.0
         with:
-          context: ./
-          file: ./Dockerfile
+          context: ./kube-news/
+          file: ./kube-news/Dockerfile
           push: true
           tags: |
             rogeriop1990cv/kubenews:latest
@@ -42,5 +42,5 @@ jobs:
         with:
           images: rogeriop1990cv/kubenews:${{ github.run_number }}
           manifests: |
-            k8s/deployment.yaml
+            /kube-news/k8s/deployment.yaml
             
